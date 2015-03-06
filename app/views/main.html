@@ -1,0 +1,17 @@
+<div>
+    <ul class="paper-list">
+        <li class="paper-list-item" id="paper-list-item-{{$index}}" ng-repeat="raw_item in raw" skrollr data-60-top="">
+            <div class="paper-header jumbotron">
+                <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+                    <div class="inner">
+                        <div am-time-ago="raw_item.msg__headers__Date" title="{{raw_item.msg__headers__Date}}"></div>
+                        <div>{{raw_item.msg__subject}}</div>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 90px; display: none;"></div>
+            <html-frame src="raw_item.msg__html"></html-frame>
+            <div class="clearfix"></div>
+        </li>
+    </ul>
+</div>
